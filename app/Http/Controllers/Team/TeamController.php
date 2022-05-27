@@ -30,6 +30,10 @@ class TeamController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //Responsável por chamar os repositories que são responsáveis por tratar a lógica e devolver para os controllers;
+    //Deveria ter mantido toda lógica que trata os dados dos models direto nos models e desenvolver voltado para interface
+
     public function create(Request $request, TeamRepository $TeamRepository, MatchRepository $MatchRepository, PointRepository $PointsRepository)
     {  
 
@@ -94,10 +98,13 @@ class TeamController extends Controller
             "match"=>'QF'
         ]);
         }
+        //insere e trata as fases do campeonato
         $MatchRepository->insert($match_a);
         $PointsRepository->insert($pts);
         $MatchRepository->semiFinals();
         $MatchRepository->finals();
+
+        //chama o método que retorna e exibes os dados na view
         $this->show();
 
     }
