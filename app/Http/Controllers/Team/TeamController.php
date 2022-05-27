@@ -120,10 +120,8 @@ class TeamController extends Controller
         $PointsRepository->insert($pts);
         $MatchRepository->semiFinals();
         $MatchRepository->finals();
-
-        //chama o método que retorna e exibes os dados na view
         $this->show();
-
+        return back()->with('mensagem', 'Campeonato gerado com sucesso!');
     }
 
     /**
