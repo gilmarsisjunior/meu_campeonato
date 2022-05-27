@@ -4,6 +4,7 @@ use App\Models;
 use App\Models\Team;
 use Illuminate\Support\Facades\DB;
 
+//esse repositories tem a tarefa de tratar lógica relacionada aos times;
 class teamRepository {
     
     public function insert(array $teams){
