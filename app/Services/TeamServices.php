@@ -1,7 +1,7 @@
 <?php
 namespace App\Services;
 
-
+//O team service trata tudo relacionado a pequenas manipulações que não necessáriamente envolvem o model;
 class TeamServices {
 
 
