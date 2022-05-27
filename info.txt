@@ -1,0 +1,48 @@
+1- oito times participam do campeonato;
+
+2- na primeira fase (quartas de final) quatro jogos são sorteados, sendo que cada time joga apenas uma vez;
+
+3- na segunda fase (semifinais) dois jogos são sorteados, sendo que cada time joga apenas uma vez;
+
+4- o perdedor de cada jogo é eliminado do campeonato;
+
+5- os perdedores das semifinais disputam o 3o lugar;
+
+6- a final é disputada pelos vencedores das semifinais, definindo o 1o e 2o lugar do campeonato;
+
+7- em caso de empate, considere como vencedor o time com a maior pontuação
+(acumulada desde o início do campeonato):
+
+    para cada gol marcado, o time recebe 1 ponto;
+    para cada gol sofrido, o time perde 1 ponto;
+
+8- em caso de novo empate, considere como vencedor o time que foi inscrito primeiro no campeonato;
+
+9- o placar de cada jogo pode ser gerado randomicamente pelo back-end ou por uma rotina em Python, como detalhado no tópico a seguir.
+
+
+
+banco de dados:
+    TEAMS: id, nome, group, key,  created_at, updated_at;
+    SEMI_FINAL: id_match, id_team1, goal1, taken1, points1, id_team2, goal2, taken2, points2, groups, type;
+
+
+
+
+MENU:
+ CRIAR CAMPEONATO: SELECT com todos os 8 times e nome do campeonato;
+ VER CAMPEONATO : Tabela que mostra os jogos e seus respectivos resultados;
+
+
+
+
+
+ESCOPO:
+
+
+P1:
+ ESCOLHE 8 TIMES;
+ GERA PARTIDA;
+
+P2: 
+ GERA RESULTADOS DAS QUARTAS DE FINAIS
