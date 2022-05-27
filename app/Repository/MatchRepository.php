@@ -8,7 +8,9 @@ use App\Services\TeamServices;
 use App\Repository\PointRepository;
 use Illuminate\Support\Facades\DB;
 
+//Resolvi utilizar um pouco do pattern repositorie porque iria utilizar bastante lógica nos models;
 
+//Esse repositories trata quase tudo referente as partidas do campeonato;
 class MatchRepository {
 
 
