@@ -4,6 +4,9 @@
 @section('content')
 <form action="{{route('teams.create')}}" method="POST">
     @csrf
+    @if (session('mensagem'))
+       <p style="color: green"> {{session('mensagem')}}</p>
+    @endif
     @if ($errors->any())
         <h1 style="color: rgb(242, 57, 57)">Existe um erro</h1>
         @foreach ($errors->all() as $erro)
