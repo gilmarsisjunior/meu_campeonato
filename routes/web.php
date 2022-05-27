@@ -16,6 +16,4 @@ use App\Http\Controllers\Match\MatchController;
 
 Route::get('/', [TeamController::class, 'index']);
 Route::post('/create', [TeamController::class, 'create'])->name('teams.create');
-
-Route::get('/s', [MatchController::class, 'semiFinals']);
 Route::get('/campeonato', [TeamController::class, 'show']);
