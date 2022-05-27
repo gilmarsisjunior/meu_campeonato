@@ -4,7 +4,12 @@
 @section('content')
 <form action="{{route('teams.create')}}" method="POST">
     @csrf
-
+    @if ($errors->any())
+        <h1 style="color: rgb(242, 57, 57)">Existe um erro</h1>
+        @foreach ($errors->all() as $erro)
+            <h4 style="color: red">{{$erro}}</h4>
+        @endforeach
+    @endif
     <div class="form-group col-md-4">
       <label for="name">Nome dos Times</label>
       <input type="name1" class="form-control" id="name1" name="name1" aria-describedby="emailHelp" placeholder="Digite o nome do time 1">
@@ -42,7 +47,7 @@
 
 
   <div>
-      <button type="submit"class="btn btn-primary">Criar Campeonato</button>
+      <button type="submit"class="btn btn-primary">Gerar Campeonato</button>
   </div>
 </form>
 @endsection
